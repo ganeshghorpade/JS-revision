@@ -1,7 +1,13 @@
 let arr1 = [1,2,34,5];
 let arr2 = [6,7,8];
 
-let merge = [...arr1,...arr2];// spread operator
+// spread operator
+
+//The spread operator (...) is used to expand elements of an array or properties 
+// - of an object into individual values, 
+// - commonly used for copying, merging, and updating data immutably.
+
+let merge = [...arr1,...arr2];
 console.log(merge);
 
 // flat function
