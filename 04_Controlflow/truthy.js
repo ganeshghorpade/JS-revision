@@ -107,3 +107,5 @@ let canVote = age>=18 ? "you can vote" :"you not eligible to make a vote";
 
 console.log(canVote);
 
+// 07:14:35
+

@@ -62,3 +62,17 @@ console.log(Object.entries(obj4)); // [ [ 'name1', 'ram' ],[ 'location1', 'mumba
 // the boolean value
 
 console.log(Object.hasOwnProperty("name"));  // true 
+console.log(Object.hasOwn(obj4, "name1")); // above and below both are same
+
+const newobj = {city:"vashi"};
+
+console.log(Object.assign(obj4,newobj)); // Merge objects / Clone object (shallow)
+
+Object.freeze(newobj);
+
+newobj.pincode = "400612";
+
+console.log(newobj.pincode); // output is undefine because on line 71 we used freeze - Makes object read-only
+
+
+
