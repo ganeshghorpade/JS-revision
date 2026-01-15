@@ -1,0 +1,162 @@
+                                            <!-- DOM notes -->
+<!--
+What is window?
+window is the top-level object of the browser
+
+Think like this:
+Browser tab = window
+
+Everything inside it lives in window
+
+Examples inside window:
+
+document,alert(),setTimeout(),location,localStorage
+
+window.alert("Hello");   // same as alert("Hello")
+
+--------------------------------------------------------------------------------------------------------------
+
+What is document?
+document represents the webpage (HTML)
+
+It is inside window.
+window.document === document // true
+
+Use document to: access HTML , change elements , read page content
+
+
+Document
+ └── html
+     └── body
+         ├── h1
+         └── button
+
+DOM is a programming model that represents a webpage as objects, so JavaScript can:
+
+read HTML
+
+change HTML 
+
+change CSS
+
+react to user actions (click, input, etc.)
+
+---------------------------------------------------------------------------------
+
+'document'
+     - document represents the whole webpage
+
+    - When a webpage loads, the browser creates one big object called document.
+
+    - This object contains all HTML elements.
+--------------------------------------------------------------------------------------------
+'getElementById' 
+    - it is select the element by "ID" by using the "document.getElementById"
+    - it is used to 
+                 - To access a specific element - element = document.getElementById("btn");
+                 - To change text - element.innerText = "New Text";
+                 - To change style - element.style.color = "red";
+                 - To add click action
+---------------------------------------------------------------------------------------------------
+getElementByClassName
+    - it is select the element by "class" by using the "document.getElementByClassName"
+
+    -   <p class="item">Apple</p> - 0 index
+        <p class="item">Banana</p> - 1 index
+        <p class="item">Mango</p>  - 2 index
+
+    - ele = document.getElementsByClassName("item")
+
+    - ele[0].style.color = 'red'; // here apple color is red
+
+    - we also put loop on ele
+
+    - for (let item of ele) {
+      item.style.color = "blue";
+      } 
+       // output is it make color blue of the that per item 
+-----------------------------------------------------------------------------------------------------
+querySelector
+            - To get FIRST element that matches a CSS selector
+            - Returns only ONE element
+            - <p class="item">Apple</p> - 0 index
+              <p class="item">Banana</p> - 1 index
+              <p class="item">Mango</p>  - 2 index
+            - const firstItem = document.querySelector(".item");
+            - console.log(firstItem) // output - Returns only (<p class="item">Apple</p> - 0 index)
+
+            - document.querySelector("#title");   // id
+              document.querySelector("p");        // tag
+              document.querySelector(".item");    // class
+
+querySelectorAll 
+           -  What is querySelectorAll?
+
+           -  querySelectorAll is used to select MULTIPLE elements from the DOM using CSS selectors.
+
+           -  It returns all matching elements.
+
+
+
+------------------------------------------------------------------------------------------------
+
+getAttribute
+            - getAttribute() 
+            - Used to READ an attribute value
+            - let ele = document.querySelector("div")
+              ele.getAttribute("class") // output : 'item' because  attribute value of class attribute is "item"
+
+setAttribute
+            - setAttribute()
+            - Used to ADD or CHANGE an attribute
+            - let ele = document.querySelector("div")
+              ele.setAttribute("class","item div1") // here when we add new attribute value then we need write already 
+                                                    // - value with new value
+-----------------------------------------------------------------------------------
+
+innerText
+    - Gives only visible text on the screen
+    - Respects CSS (like display: none)
+    - Ignores hidden text
+    - Reads text as a human sees it
+
+textContent 
+    - Gives all text, even hidden ones
+    - Does NOT care about CSS
+    - Faster than innerText
+    - Reads text as it exists in code
+
+innerHTML
+    - Gives text + HTML tags
+    - Returns actual HTML
+    - Can add HTML also
+    - Powerful but dangerous if used with user input
+---------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>Dom Learning</h1>
+    <div class="item">
+        <h1 class="heading">hey we learn js</h1>
+        <p style="display:hidden;">welcome to js</p>
+    </div>
+
+    <p class="item">Apple</p>
+    <p class="item">Banana</p>
+    <p class="item">Mango</p>
+
+    <div>
+        <ul class="item1">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+</html>
