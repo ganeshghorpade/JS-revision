@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+.main{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.input{
+    padding: 10px;
+}
+
+.result{
+    padding-top: 20px;
+}
+
+
+
