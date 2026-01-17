@@ -1,0 +1,26 @@
+.main{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.button{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+#red{
+background-color: red;
+}
+#blue{
+background-color: blue;
+}
+#green{
+background-color: green;
+}
+#orange{
+background-color: orange;
+}
