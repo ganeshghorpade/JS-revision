@@ -10,4 +10,5 @@ console.log(newdate.toDateString()); */
 // console.log(newdate.toDateString());
 
 let datatimestamp = Date.now();
-console.log(datatimestamp.Date);
+console.log(datatimestamp.now()
+);
