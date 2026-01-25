@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 1</title>
+</head>
+<body>
+    <h1> topic is setInterval</h1>
+    <button id="start">start</button>
+</body>
+<script>
+
+    let sayhii = (str)=>{
+        console.log(str , Date.now());
+        
+    }
+let btn = document.getElementById('start');
+let setintrvalid = null;
+
+btn.addEventListener('click',()=>{
+    if(setintrvalid === null){
+        setintrvalid = setInterval(sayhii,1000,'hii');
+        btn.innerText = "stop"
+    }else{
+        clearInterval(setintrvalid);
+        setintrvalid = null;
+        btn.innerHTML = "start  "
+    }
+})
+</script>
+</html>

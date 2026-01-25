@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   img{
+    width: 150px;
+    height: 100px;
+   }
+</style>
+<body>
+    <div class="main">
+        <ol class="ul-list">
+            <li><img id="t1" src="https://images.pexels.com/photos/34074202/pexels-photo-34074202.jpeg"></li>
+            <li><img id="t2" src="https://images.pexels.com/photos/35156893/pexels-photo-35156893.jpeg"></li>
+            <li><img id="t3" src="https://images.pexels.com/photos/1703857/pexels-photo-1703857.jpeg"></li> 
+            <li><a href="http://www.google.com">Google</a></li>
+        </ol>
+    </div>
+    
+</body>
+<script>
+    // how to remove the ele on click
+    // note . just follow chatgpt bookmark for the theory
+    document.querySelector(".ul-list").addEventListener('click',(e)=>{
+        e.preventDefault();
+        if(e.target.tagName === 'IMG'){
+            let remit = e.target.parentNode;
+            console.log(remit);
+            remit.remove()
+        }
+    })
+</script>
+</html>
