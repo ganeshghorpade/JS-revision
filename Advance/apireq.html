@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: rgb(9, 9, 58);
+        color: white;
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>XMLHttpRequest in JavaScript</h1>
+        <h1>My github Details</h1>
+    </div>
+</body>
+<script>
+    let name;
+    const xhr = new XMLHttpRequest();
+
+    const ApiUrl = "https://api.github.com/users/ganeshghorpade";
+
+    xhr.open('GET',ApiUrl);
+
+    xhr.onreadystatechange = function(){
+
+        if(xhr.readyState === 4){
+
+            const data = JSON.parse(this.responseText);
+
+            const main = document.querySelector('.main');
+
+            const h1 = document.createElement('h1');
+
+            const img = document.createElement('IMG');
+
+            img.setAttribute("src",`${data.avatar_url}`)
+            img.style.height = "250px"
+            img.style.width = "250px"
+            img.style.borderRadius = "50%"
+
+            h1.textContent = `name : ${data.name}
+                            `
+            main.appendChild(img);
+            main.appendChild(h1);
+        }
+    }
+
+
+xhr.send();
+
+
+
+</script>
+</html>
