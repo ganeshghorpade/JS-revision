@@ -1,0 +1,31 @@
+body{
+    background-color:rgb(34, 33, 33);
+}
+
+.main{
+    background-color: rgb(72, 72, 72);
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+h2{
+    background-color: black;
+    color: white;
+}
+button{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+input{
+    height: 25px;
+    width: 250px;
+    border: 3px solid gray;
+}
+
+.remain{
+    padding-bottom: 20px;
+}

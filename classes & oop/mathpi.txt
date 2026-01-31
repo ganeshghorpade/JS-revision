@@ -1,0 +1,87 @@
+Can we update Math.PI in JavaScript?
+❌ NO — we cannot change it.
+Math.PI = 10;
+console.log(Math.PI);
+
+Output:
+3.141592653589793
+
+
+👉 Value does not change.
+
+🧠 Why we cannot update it?
+
+Because Math.PI is:
+
+read-only
+
+non-writable
+
+constant property
+
+JavaScript protects it 🔒
+
+🔍 Internally JavaScript defines it like this:
+writable: false
+
+
+So assignment is ignored.
+
+✅ Proof
+console.log(Object.getOwnPropertyDescriptor(Math, "PI"));
+
+
+Output:
+
+{
+  value: 3.141592653589793,
+  writable: false,
+  enumerable: false,
+  configurable: false
+}
+
+🧠 Simple words
+
+Math.PI is fixed by JavaScript engine and cannot be changed.
+
+🧒 Easy example
+
+Think like:
+
+Speed of light
+
+Gravity value
+
+You cannot change them 😄
+
+Same with:
+
+Math.PI
+
+✅ Interview-ready answer
+
+No, Math.PI cannot be updated because it is a read-only constant property defined by the JavaScript engine.
+
+⭐ One-line answer (perfect)
+
+Math.PI is immutable in JavaScript.
+
+--------------------------------------------------------------------------
+
+We can create our own constant like Math.PI
+
+const MyMath = {};
+
+Object.defineProperty(MyMath, "PI", {
+  value: 3.14159,
+  writable: false,
+  configurable: false,
+  enumerable: true
+});
+
+console.log(MyMath.PI); // 3.14159
+
+MyMath.PI = 10;
+console.log(MyMath.PI); // still 3.14159 ✅
+
+Math.PI is a read-only property, and we can create similar constants using property descriptors.
